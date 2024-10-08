@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./Images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Students Registration System</title>
+</head>
+
+<body>
+    <header>
+        <h1>Students Registration System</h1>
+        <hr class="redline">
+        <p>This system allows users to add, edit, and delete student records. It also supports data persistence through
+            local storage, ensuring the data remains even after the page is refreshed.</p>
+    </header>
+
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <form id="studentForm">
+                <h2>Enter your Academic Details</h2>
+                <div class="form-group">
+                    <input type="text" id="studentName" required>
+                    <label for="studentName">Student Name</label>
+                </div>
+                <div class="side-by-side">
+                    <div class="form-group">
+                        <input type="text" id="class" required placeholder=" " />
+                        <label for="class">Class</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="studentID" required placeholder=" " />
+                        <label for="studentID">Student ID</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phoneNo" required>
+                    <label for="phoneNo">Phone No</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="emailId" required>
+                    <label for="emailId">E-mail ID</label>
+                </div>
+                <button type="submit" class="btn" id="submitBtn">Add Student</button>
+            </form>
+        </div>
+
+        <!-- Display Section -->
+        <div class="display-section">
+            <h2>Registered Students Data</h2>
+            <div class="table-wrapper">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>ID</th>
+                            <th>Phone</th>
+                            <th>Email ID</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Student records will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>        
+    </div>
+
+    <!-- My script file -->
+    <script src="script.js"></script>
+</body>
+
+<footer>
+    <p class="footer-copyright">&copy; Student Registration System - Aditya's Workshop. All rights reserved.</p>
+</footer>
+
+</html>

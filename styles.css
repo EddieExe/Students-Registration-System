@@ -1,0 +1,332 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    background: url('./Images/4877010.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Poppins", sans-serif;
+    color: #525252;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #404040;
+}
+
+header p {
+    font-size: 15px;
+    text-align: center;
+    color: #737373;
+}
+
+.redline {
+    border: none;
+    height: 1px;
+    background-color: #e11d48;
+    width: 90%;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Form Section */
+.form-section {
+    width: 45%;
+}
+
+.form-section h2 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.side-by-side {
+    display: flex;
+    gap: 20px;
+}
+
+.side-by-side div {
+    flex: 1;
+}
+
+input[type="tel"]::-webkit-outer-spin-button,
+input[type="tel"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-group {
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.side-by-side {
+    position: relative;
+    margin: 0px auto;
+    padding: 0;
+    height: 70px;
+    width: 74%;
+    gap: 18px;
+}
+
+.form-group input,
+.form-group textarea {
+    color: #e11d48;
+    font-weight: 500;
+    width: 100%;
+    padding: 1.2rem 0.8rem 0.8rem 0.8rem;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    font-size: medium;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    font-family: "Quicksand", sans-serif;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/* Focus effect */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #e11d48;
+}
+
+/* Label styling */
+.form-group label {
+    position: absolute;
+    top: 0.9rem;
+    left: 15px;
+    background: transparent;
+    font-size: 15px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label {
+    top: -0.6rem;
+    left: 15px;
+    font-size: 12px;
+    color: #e11d48;
+    padding: 2px 5px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.btn {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #e11d48;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.5), 0 6px 6px rgba(225, 29, 72, 0.5), 0 0 100px -10px #e11d48;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(225, 29, 72, 0.25), 0 10px 10px rgba(225, 29, 72, 0.22), 0 0 120px -10px #e11d48;
+}
+
+.btn:active {
+    background-color: #e0395e;
+}
+
+/* Display Section */
+.display-section {
+    width: 45%;
+}
+
+.display-section h2 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Table wrapper with scrolling */
+.table-wrapper {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Sticky table header */
+th {
+    background: #d4d4d4;
+    font-size: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+td {
+    font-size: 12px;
+}
+
+/* Remaining table styling */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    cursor: pointer;
+    transition: fill 0.3s ease, transform 0.3s;
+}
+
+.edit-btn:hover .icon {
+    fill: #007bff;
+    transform: scale(1.5);
+}
+
+.delete-btn:hover .icon {
+    fill: #dc3545;
+    transform: scale(1.5);
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.footer-copyright {
+    font-size: 15px;
+    text-align: center;
+    color: #737373;
+}
+
+
+/* Responsive Design for Small Screens */
+
+/* Mobile Devices */
+@media (max-width: 476px) {
+    header h1 {
+        font-size: 1.5rem;
+        margin: 15px auto;
+    }
+
+    header p {
+        font-size: 13px;
+        margin: 12px 6px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    form {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .form-section {
+        width: 100%;
+    }
+
+    .form-section h2 {
+        font-size: 18px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem;
+    }
+
+    .form-group label {
+        top: 0.6rem;
+        font-size: small;
+    }
+
+    .side-by-side {
+        height: 60px;
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 13px;
+        font-weight: 500;
+        margin: 15px auto;
+        padding: 7px 10px;
+    }
+
+    .display-section {
+        width: 100%;
+    }
+
+    .display-section h2 {
+        font-size: 18px;
+    }
+
+    th {
+        font-size: 13px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+    }
+}
+
+/* Tablet Devices */
+@media (min-width: 477px) and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+    }
+
+    .form-group label {
+        top: 0.6rem;
+        font-size: 15px;
+    }
+
+    .side-by-side {
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .footer-copyright {
+        font-size: 14px;
+    }
+}
